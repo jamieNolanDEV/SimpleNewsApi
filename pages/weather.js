@@ -174,7 +174,7 @@ export default class News extends React.Component {
     // Build the url which will be used to get the data
     // See https://newsapi.org/s/the-irish-times-api
 
-    const defaultUrl = `https://newsapi.org/v2/top-headlines?&q=weather&apiKey=${apiKey}`;
+    const defaultUrl = `https://newsapi.org/v2/everything?q=weather&from=2018-11-01&sortBy=publishedAt&apiKey=${apiKey}`;
 
     // Get news data from the api url
     const data = await getNews(defaultUrl);

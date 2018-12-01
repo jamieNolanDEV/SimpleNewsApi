@@ -59,7 +59,7 @@ export default class News extends React.Component {
   setNewsSource = (input) => {
     this.setState({
       newsSource: input,
-      url: `https://newsapi.org/v2/top-headlines?sources=${input}&apiKey=${apiKey}`
+      url: `https://newsapi.org/v2/everything?q=${input}&apiKey=${apiKey}`
     })
   }
 
@@ -72,7 +72,8 @@ export default class News extends React.Component {
       // Get the link text
       newsSource: `${event.target.innerText}`,
       // Build the search URL using the link name
-      url: `https://newsapi.org/v2/${event.target.name}&apiKey=${apiKey}`
+      url: `https://newsapi.org/v2/everything?q=${event.target.innerText}&apiKey=${apiKey}`
+
     })
     console.log(this.state.url);
   }
